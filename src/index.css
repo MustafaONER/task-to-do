@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ----- variables ------ */
+
+:root {
+  --clr-dark-blue: #023e8a;
+  --clr-medium-blue: #0096c7;
+  --clr-light-blue: #caf0f8;
+  --clr-white: #fff;
+  --clr-border-radius: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ----- globals ------ */
+
+body {
+  background-color: var(--clr-light-blue);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* -----form------ */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.form-title,
+.form-description,
+.form-deadline {
+  margin-bottom: 1rem;
+  width: 40rem;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: var(--clr-border-radius);
+  border: none;
+}
+
+.form-button {
+  padding: 0.5rem;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-blue);
+  border: none;
+  border-radius: var(--clr-border-radius);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: var(--clr-medium-blue);
+  transition: transform 250ms, opacity 400ms;
+  transform: scale(1.05);
+}
+
+input {
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* -----values------ */
+
+.values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border-radius: var(--clr-border-radius);
+  padding: 1rem;
+  background-color: #d8e2dc;
+  align-items: center;
+}
+
+.done {
+  border: none;
+  color: #2a9d8f;
+  background-color: #d8e2dc;
+  cursor: pointer;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+
+/* -----header------ */
+
+.title {
+  text-transform: uppercase;
 }
